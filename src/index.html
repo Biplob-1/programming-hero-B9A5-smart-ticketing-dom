@@ -4,9 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DaisyUi Boilerplate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/output.css">
 </head>
-<body>
-    
+<body class="custom-fonts">
+    <header>
+        <div class="nav-section">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-xl">Sadik-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+              </div>
+        </div>
+        <div class="banner-section bg-no-repeat bg-cover text-white text-center">
+            <h3>End-to-End Travel with <br> Sadik Paribahan</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut repellat earum explicabo quisquam omnis, quam eos ab. Voluptatibus tenetur ad, doloribus reprehenderit deserunt minima odio repellendus debitis quasi ipsam dolore.</p>
+            <button type="btn">Buy Tickets</button>
+        </div>
+    </header>
+    <main>
+        <section class="sadik-paribahan">
+            <div>
+                <h3>Sadik Paribahan</h3>
+                <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+            </div>
+            <div>
+                <div class="hero min-h-screen bg-base-200">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+                      <div>
+                        <div class="flex">
+                            <img src="images/bus-logo.png" alt="">
+                            <h3>Sadik Paribahan</h3>
+                            <p>Coach-009-WEB ! AC_Business</p>
+                            <!-- <button type="btn" class="bg-black"><img src="images/seat-green.png" alt="">40 Seats left</button> -->
+                            <a class="btn"><img src="images/seat-green.png" alt="">40 Seats left</a>
+                        </div>
+                        <div class="bg-gray-50 flex flex-col">
+                            <div class="flex justify-between">
+                                <h6>Route</h6>
+                                <h6 class="">Dhaka - Sylhet</h6>
+                            </div>
+                            <div class="flex justify-between">
+                                <h6>Departure Time</h6>
+                                <h6>9:00 PM</h6>
+                            </div>
+                            <div class="flex justify-around">
+                                <h6>Boarding Point - Laxmipur</h6>
+                                <h6>Dropping Point - Bogura</h6>
+                                <h6>Est. Time - 11 Hour</h6>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div></div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 </html>

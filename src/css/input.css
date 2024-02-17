@@ -3,3 +3,11 @@
 @tailwind utilities;
 
 /* custome css here */
+.custom-fonts{
+    font-family: "Raleway", "Inter", sans-serif;
+}
+.banner-section{
+    background-image: url(../images/banner.png);
+}
+
+
