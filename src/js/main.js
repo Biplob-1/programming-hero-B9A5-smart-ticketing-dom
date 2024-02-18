@@ -86,6 +86,10 @@ for (const seat of totalSeat) {
             // totalSeatQuantity.innerText = result;
             // console.log(totalBusSeat);
 
+            // if (clickedButtons === 4) {
+
+            // }
+
             // four buttons click cheack
             if (clickedButtons === 4) {
                 for (const sit of totalSeat) {
@@ -94,14 +98,72 @@ for (const seat of totalSeat) {
                     }
                 }
             }
+            if (clickedButtons === 4) {
+                alert(`You have reached the maximum number of tickets. Have a nice journey!`);
+            }
         }
     });
 }
+
+// coupon section
+
+
+document.getElementById('apply-button').addEventListener('click', function () {
+    const fifteenPercentDiscount = document.getElementById('fifteen-Percent-Discount');
+    const fifteenDiscount = fifteenPercentDiscount.innerText;
+
+    const twentyPercentDiscount = document.getElementById('twenty-Percent-Discount');
+    const twentyDiscount = twentyPercentDiscount.innerText;
+    // console.log(twentyDiscount)
+
+    const copounValue = document.getElementById('discount-input');
+    const copounText = copounValue.value;
+
+    const grandTotalArea = document.getElementById('grand-total');
+    const grandTotal = parseInt(grandTotalArea.innerText);
+
+    if (copounText === fifteenDiscount || copounText === twentyDiscount) {
+        let result;
+        // const totalPriceArea = document.getElementById('total-price');
+        // const totalPrice = parseInt(totalPriceArea.innerText);
+        // console.log(typeof totalPrice);
+
+        // const grandTotalArea = document.getElementById('grand-total');
+        // const grandTotal = parseInt(grandTotalArea.innerText);
+        // console.log(typeof grandTotal);
+
+
+        if (fifteenDiscount) {
+            const fifteenPercentOffer = grandTotal * (15 / 100);
+            result = grandTotal - fifteenPercentOffer;
+            // console.log(result);
+
+        } else {
+            const twentyPercentOffer = grandTotal * (20 / 100);
+            result = grandTotal - twentyPercentOffer;
+            // console.log(result);
+        }
+        grandTotalArea.innerText = result.toFixed(2);
+
+        const hideCopunArea = document.getElementById('apply-copun-arear');
+        if (hideCopunArea) {
+            hideCopunArea.style.display = 'none';
+        }
+
+    }
+});
+
+function getTextById(tagId) {
+    const getTextWithTagName = document.getElementById(tagId);
+    const getText = getTextWithTagName.innerText;
+    return getText;
+}
+// console.log(getTextById('ticket-price'));
 // final task booking success
 document.getElementById('next-button').addEventListener('click', function () {
     const targetSuccess = document.getElementById('targetSuccess');
 
     if (targetSuccess) {
-        targetSuccess.scrollIntoView({ behavior: 'smooth' });
+        window.location.href = 'demo.html';
     }
 });
