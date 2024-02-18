@@ -2062,6 +2062,10 @@ html {
   z-index: 1;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .m-5 {
   margin: 1.25rem;
 }
@@ -2117,6 +2121,10 @@ html {
   height: 1.25rem;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -2143,6 +2151,10 @@ html {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -2199,6 +2211,10 @@ html {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .rounded-xl {
@@ -2266,6 +2282,16 @@ html {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
 .bg-slate-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
@@ -2295,6 +2321,14 @@ html {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-2 {
@@ -2333,6 +2367,11 @@ html {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-3 {
@@ -2492,6 +2531,11 @@ html {
 .text-gray-950 {
   --tw-text-opacity: 1;
   color: rgb(3 7 18 / var(--tw-text-opacity));
+}
+
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
 }
 
 .text-white {
