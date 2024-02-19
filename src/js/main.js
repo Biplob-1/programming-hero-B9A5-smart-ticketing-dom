@@ -97,9 +97,6 @@ for (const seat of totalSeat) {
                         sit.disabled = true;
                     }
                 }
-                if (clickedButtons === 4) {
-                    alert(`You have reached the maximum number of tickets. Have a nice journey!`);
-                }
             }
         }
     });
