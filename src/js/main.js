@@ -1,4 +1,4 @@
-// scholl Button event listener
+// scroll Button event listener
 document.getElementById('scrollButton').addEventListener('click', function () {
     const targetSection = document.getElementById('targetSection');
 
@@ -7,10 +7,15 @@ document.getElementById('scrollButton').addEventListener('click', function () {
     }
 });
 
-
 let totalPrice = 0;
 let clickedButtons = 0;
 const totalSeat = document.querySelectorAll('.sit');
+
+// Initialize the Next and Apply Coupon buttons as disabled
+const nextButton = document.getElementById('next-button');
+const applyCouponButton = document.getElementById('apply-button');
+nextButton.disabled = true;
+applyCouponButton.disabled = true;
 
 for (const seat of totalSeat) {
     seat.addEventListener('click', function () {
@@ -22,10 +27,9 @@ for (const seat of totalSeat) {
             // get ticket price
             const ticketPrice = document.getElementById('ticket-price');
             const price = parseFloat(ticketPrice.innerText.split(' ')[0]);
-            // console.log(typeof price);
 
             // get Bus type
-            const busClass = `AC_Business`;
+            const busClass = 'AC_Business';
 
             // get & set ticket area
             const selectedTicketArea = document.getElementById('selected-ticket');
@@ -69,52 +73,45 @@ for (const seat of totalSeat) {
             grandTotalArea.innerText = totalPrice;
 
             // increment clicked buttons
-            // clickedButtons++;
-            // console.log(clickedButtons);
             let ticketQuantity = ++clickedButtons;
             const selectedTicketCount = document.getElementById('selected-ticket-count');
             selectedTicketCount.innerText = ticketQuantity;
 
-            const totalSeatQuantity = 8;
+            const totalSeatQuantity = 40;
             let result = totalSeatQuantity - ticketQuantity;
             const setTotalSeatQuantity = document.getElementById('total-seat-quantity');
             setTotalSeatQuantity.innerText = result;
-            // const totalBusSeat = parseInt(totalSeatQuantity.innerText);
-            // console.log(typeof totalBusSeat);
 
-            // let result = totalBusSeat - ticketQuantity;
-            // totalSeatQuantity.innerText = result;
-            // console.log(totalBusSeat);
+            // enable nextButton if at least one seat is selected
+            nextButton.disabled = false;
 
-            // if (clickedButtons === 4) {
+            // enable applyCouponButton if four seats are selected
+            if (clickedButtons === 4) {
+                applyCouponButton.disabled = false;
+            }
 
-            // }
-
-            // four buttons click cheack
+            // four buttons click check
             if (clickedButtons === 4) {
                 for (const sit of totalSeat) {
                     if (!sit.disabled) {
                         sit.disabled = true;
                     }
                 }
-            }
-            if (clickedButtons === 4) {
-                alert(`You have reached the maximum number of tickets. Have a nice journey!`);
+                if (clickedButtons === 4) {
+                    alert(`You have reached the maximum number of tickets. Have a nice journey!`);
+                }
             }
         }
     });
 }
 
 // coupon section
-
-
 document.getElementById('apply-button').addEventListener('click', function () {
     const fifteenPercentDiscount = document.getElementById('fifteen-Percent-Discount');
     const fifteenDiscount = fifteenPercentDiscount.innerText;
 
     const twentyPercentDiscount = document.getElementById('twenty-Percent-Discount');
     const twentyDiscount = twentyPercentDiscount.innerText;
-    // console.log(twentyDiscount)
 
     const copounValue = document.getElementById('discount-input');
     const copounText = copounValue.value;
@@ -124,46 +121,41 @@ document.getElementById('apply-button').addEventListener('click', function () {
 
     if (copounText === fifteenDiscount || copounText === twentyDiscount) {
         let result;
-        // const totalPriceArea = document.getElementById('total-price');
-        // const totalPrice = parseInt(totalPriceArea.innerText);
-        // console.log(typeof totalPrice);
-
-        // const grandTotalArea = document.getElementById('grand-total');
-        // const grandTotal = parseInt(grandTotalArea.innerText);
-        // console.log(typeof grandTotal);
-
 
         if (fifteenDiscount) {
             const fifteenPercentOffer = grandTotal * (15 / 100);
             result = grandTotal - fifteenPercentOffer;
-            // console.log(result);
-
         } else {
             const twentyPercentOffer = grandTotal * (20 / 100);
             result = grandTotal - twentyPercentOffer;
-            // console.log(result);
         }
         grandTotalArea.innerText = result.toFixed(2);
 
-        const hideCopunArea = document.getElementById('apply-copun-arear');
-        if (hideCopunArea) {
-            hideCopunArea.style.display = 'none';
+        const hideCouponArea = document.getElementById('apply-coupon-area');
+        if (hideCouponArea) {
+            hideCouponArea.style.display = 'none';
         }
 
+    } else {
+        alert(`Invalid Coupon.`);
     }
 });
 
-function getTextById(tagId) {
-    const getTextWithTagName = document.getElementById(tagId);
-    const getText = getTextWithTagName.innerText;
-    return getText;
-}
-// console.log(getTextById('ticket-price'));
 // final task booking success
 document.getElementById('next-button').addEventListener('click', function () {
     const targetSuccess = document.getElementById('targetSuccess');
 
     if (targetSuccess) {
-        window.location.href = 'demo.html';
+        targetSuccess.classList.remove('hidden');
+        targetSuccess.scrollIntoView({ behavior: 'smooth' });
+    }
+});
+
+// click continue button to hide the section
+document.getElementById('continue-button').addEventListener('click', function () {
+    const targetSuccess = document.getElementById('targetSuccess');
+
+    if (targetSuccess) {
+        targetSuccess.classList.add('hidden');
     }
 });
