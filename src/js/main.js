@@ -114,7 +114,7 @@ document.getElementById('apply-button').addEventListener('click', function () {
     const twentyDiscount = twentyPercentDiscount.innerText;
 
     const copounValue = document.getElementById('discount-input');
-    const copounText = copounValue.value;
+    const copounText = copounValue.value.trim();
 
     const grandTotalArea = document.getElementById('grand-total');
     const grandTotal = parseInt(grandTotalArea.innerText);
