@@ -44,7 +44,7 @@
             <h3 class="text-white text-[64px] font-extrabold font-['Raleway'] leading-[86px] pt-16">End-to-End Travel with <br> <span class="text-[#1DD100] text-[64px]font-extrabold font-['Raleway'] leading-[86px]">Sadik Paribahan</span></h3>
             <p class="text-white text-lg font-['Inter'] leading-[30px] ">Secure your journey with ease! Explore our user-friendly <br>platform for hassle-free ticket booking. Enjoy a seamless <br> quick confirmations, and reliable travel information. Book<br>  now for a convenient and stress-free travel experience.</p>
             <div class="pb-16 pt-5">
-              <button type="btn" id="scrollButton" class="text-[#030712] font-['Raleway'] text-xl font-bold px-7 py-5 bg-[#1DD100] rounded-xl">Buy Tickets</button>
+              <button type="button" id="scrollButton" class="text-[#030712] font-['Raleway'] text-xl font-bold px-7 py-5 bg-[#1DD100] rounded-xl">Buy Tickets</button>
             </div>
         </div>
     </header>
@@ -88,7 +88,7 @@
             <h3 class="text-center text-[#030712] text-[40px] font-bold font-['Raleway']">Sadik Paribahan</h3>
             <p class="text-center text-[#030712] text-opacity-60 text-lg font-normal font-['Inter'] leading-[30px]">Yes, you can run unit tests and view the  results directly within the app. <br>The integrated testing features allow for a streamlined.</p>
           </div>
-          <div class="flex bg-white shadow-2xl rounded-xl">
+          <div id="ticket-selll" class="flex bg-white shadow-2xl rounded-xl">
             <div class="p-5 ">
               <div class="flex justify-between">
                 <div class="flex gap-4">
@@ -340,16 +340,17 @@
                 </div>
               </div>
               <div class="pt-5">
-                <!-- <label for="my_modal_7" class="btn w-full mt-5 text-white hover:text-black hover:bg-[#1cd10067]  bg-[#1DD100]">open modal</label> -->
-                <button id="next-button" class="btn w-full mt-5 text-white hover:text-black hover:bg-[#1cd10067]  bg-[#1DD100] join-item">Next</button>
+                <!-- Open the modal using ID.showModal() method -->
+                <button id="next-button" class="btn w-full mt-5 text-white hover:text-black hover:bg-[#1cd10067]  bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="targetSuccess" class="hidden">
-        <div class="success flex justify-center items-center min-h-screen">
-          <div class="flex flex-col text-center items-center bg-gray-300 p-10">
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div class="flex flex-col text-center items-center bg-gray-300 p-10 rounded-xl">
             <img src="images/success.png" alt="">
             <h1 class="text-green-700 text-2xl font-extrabold py-5">SUCCESS</h1>
             <P class=" font-bold">Thank you for booking our Bus seats.</P>
@@ -358,7 +359,7 @@
             <button id="continue-button" type="btn" class="bg-green-400 my-5 cursor-pointer text-white py-2 px-8 rounded-md text-center">Continue</button>
           </div>
         </div>
-      </section>
+      </dialog>
     </main>
     <footer class="bg-[#030712] text-white">
       <div class="mx-5">

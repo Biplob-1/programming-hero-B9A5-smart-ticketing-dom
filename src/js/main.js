@@ -143,21 +143,6 @@ document.getElementById('apply-button').addEventListener('click', function () {
     }
 });
 
-// final task booking success
-document.getElementById('next-button').addEventListener('click', function () {
-    const targetSuccess = document.getElementById('targetSuccess');
-
-    if (targetSuccess) {
-        targetSuccess.classList.remove('hidden');
-        targetSuccess.scrollIntoView({ behavior: 'smooth' });
-    }
-});
-
-// click continue button to hide the section
 document.getElementById('continue-button').addEventListener('click', function () {
-    const targetSuccess = document.getElementById('targetSuccess');
-
-    if (targetSuccess) {
-        targetSuccess.classList.add('hidden');
-    }
+    window.location.reload();
 });
