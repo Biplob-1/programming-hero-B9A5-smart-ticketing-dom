@@ -2175,6 +2175,10 @@ html {
   margin-left: 1rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -2319,6 +2323,11 @@ html {
 .border-\[\#1DD100\] {
   --tw-border-opacity: 1;
   border-color: rgb(29 209 0 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-\[\#030712\] {
@@ -2533,6 +2542,11 @@ html {
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -2671,9 +2685,18 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 

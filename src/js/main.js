@@ -11,7 +11,7 @@ let totalPrice = 0;
 let clickedButtons = 0;
 const totalSeat = document.querySelectorAll('.sit');
 
-// Initialize the Next and Apply Coupon buttons as disabled
+// Next and Apply Coupon buttons are disabled
 const nextButton = document.getElementById('next-button');
 const applyCouponButton = document.getElementById('apply-button');
 nextButton.disabled = true;
@@ -122,16 +122,18 @@ document.getElementById('apply-button').addEventListener('click', function () {
     if (copounText === fifteenDiscount || copounText === twentyDiscount) {
         let result;
 
-        if (fifteenDiscount) {
+        if (fifteenDiscount === copounText) {
             const fifteenPercentOffer = grandTotal * (15 / 100);
             result = grandTotal - fifteenPercentOffer;
-        } else {
+            console.log(fifteenPercentOffer)
+        } else if (twentyDiscount === copounText) {
             const twentyPercentOffer = grandTotal * (20 / 100);
             result = grandTotal - twentyPercentOffer;
+            console.log(twentyPercentOffer)
         }
         grandTotalArea.innerText = result.toFixed(2);
 
-        const hideCouponArea = document.getElementById('apply-coupon-area');
+        const hideCouponArea = document.getElementById('apply-copun-area');
         if (hideCouponArea) {
             hideCouponArea.style.display = 'none';
         }
